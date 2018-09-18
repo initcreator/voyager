@@ -19,6 +19,13 @@ class User extends Authenticatable implements UserContract
         'settings' => 'array',
     ];
 
+    public function __construct()
+    {
+        if (config('voyager.user.table')) {
+            $this->table = config('voyager.user.table');
+        }
+    }
+
     public function getAvatarAttribute($value)
     {
         if (is_null($value)) {

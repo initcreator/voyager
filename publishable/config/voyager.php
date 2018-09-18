@@ -20,6 +20,7 @@ return [
         'namespace'                    => null,
         'default_avatar'               => 'users/default.png',
         'redirect'                     => '/admin',
+        'table'                        => null,
     ],
 
     /*
